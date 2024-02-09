@@ -7,37 +7,24 @@ import random
 # receber as letras atraves do usuario atraves do input 
 # realizar a comparação das letras com a palavra selecionada 
 
-animais = ['macaco','elefante','girafa','leão'] 
-palavra_selecionada = [animais]
+animais = ['macaco','elefante','girafa','leao'] 
 
-teste = random.choice(animais)
+palavra_selecionada = random.choice(animais)
 
 print('Adivinhe o animal: ' + ', '.join(animais)  )
 
 palavra_digitada = input('digite o nome do animal:')
 
-for palavra_digitada in teste:
-    
+while palavra_digitada != palavra_selecionada :
+    print ("tente novamente!!!")
+    palavra_digitada = input('digite o nome do animal:')
 
-    if teste == palavra_digitada:
-        
-        print('otimo vc acertou miserave')
-    #else:
-print ("tente novamente!!!")
+    if palavra_digitada == palavra_selecionada:
+       print('otimo vc acertou miserave')
+       break    
 
-#for i in range(0,10):
-#    print(i)
-#for i in animais:
-#    print(i)
+#exit()
 
-exit()
-
-print("welcome to hangmam")
-
-leters = input("digite uma letra:")
- 
-if leters == 's':
-    print("incorrect")
 
  
  
